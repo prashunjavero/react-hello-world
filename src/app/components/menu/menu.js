@@ -54,7 +54,7 @@ export default function Menu() {
                         <Button>
                             <Link to="/vote" 
                                 className={classes.link}
-                                variant="body2">Vote</Link>
+                                variant="body2">Page</Link>
                         </Button>
                     </Typography>
                 </Grid>
