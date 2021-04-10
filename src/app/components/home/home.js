@@ -1,4 +1,5 @@
 import store from '../../../store';
+import React, { Component }  from 'react';
 
 function Home (){
     return (
