@@ -1,5 +1,6 @@
-import { render, screen } from '@testing-library/react';
-import App from './App';
+/* eslint-disable require-jsdoc, react/react-in-jsx-scope */
+import {render, screen} from '@testing-library/react';
+import App from './app';
 
 test('renders learn react link', () => {
   render(<App />);
