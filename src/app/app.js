@@ -3,7 +3,6 @@
 import './app.css';
 import Menu from './components/menu/menu';
 function App() {
-  localStorage.clear();
   return (
     <Menu />
   );
