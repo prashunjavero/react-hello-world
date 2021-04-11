@@ -97,7 +97,7 @@ function Voting (){
                       }}>Reset</Button>
                     </Box>
                }
-      </div>
+           </div>
     );
   }
   
