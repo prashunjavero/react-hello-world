@@ -3,23 +3,36 @@ import { useController, useForm } from "react-hook-form";
 
 import TextField from "@material-ui/core/TextField";
 
-function FormInput({ control, name, label }) {
+function FormInput({ control, name, label  }) {
     const {
-      field: { ref, ...inputProps }
+      field: { ref, value,...inputProps },
+       fieldState: { invalid, isTouched, isDirty , error},
+       formState: { touchedFields, dirtyFields }
     } = useController({
       name,
       control,
       label,
       rules: { required: true },
-      defaultValue: "",
+      defaultValue: ""
     });
-  
-    return <TextField {...inputProps} 
+    if( typeof(value) == "undefined" || value == "" && isTouched ){
+      let message = label + " is required"
+      return <TextField {...inputProps} 
+      error
+      id="outlined-basic" 
+      label={label} 
+      value = {value}
+      variant="outlined" 
+      helperText={message}
+      inputRef={ref} />; 
+    }
+  return <TextField {...inputProps} 
     id="outlined-basic" 
     label={label} 
+    value = {value}
     variant="outlined" 
-    inputRef={ref} />;
-
+    inputRef={ref} />; 
+ 
 }
 
 export default FormInput;

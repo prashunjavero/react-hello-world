@@ -34,7 +34,7 @@ const useStyles = makeStyles((theme) => ({
 function Home (){
   const classes = useStyles();
   let history = useHistory();
-  const {  handleSubmit, control } = useForm();
+  const { register, handleSubmit, watch, setError, errors , control} = useForm();
   const onSubmit = (data) => {
     // todo : dispatch only when qll fields are valid 
     // todo : add error of the input text
@@ -49,8 +49,8 @@ function Home (){
             <Paper className={classes.paper}>
               <form className={classes.root} noValidate autoComplete="off" onSubmit={handleSubmit(onSubmit)} >
               <FormGroup>
-                  <FormLabel><h5> Name </h5></FormLabel>
-                  <FormInput name="name" label="Name" control={control} />
+                  <FormLabel><h5> Name {errors}</h5></FormLabel>
+                  <FormInput name="name" label="Name" control={control}/>
                </FormGroup>
                <FormGroup>
                   <FormLabel><h5> Address </h5></FormLabel>
