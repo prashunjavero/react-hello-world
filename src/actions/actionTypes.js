@@ -1,10 +1,19 @@
 /* eslint-disable require-jsdoc */
-export const INCREMENT_COUNTER = 'INCREMENT_COUNTER';
+export const INCREMENT_VOTE_COUNT = 'INCREMENT_VOTE_COUNT';
+export const DECREMENT_VOTE_COUNT = 'DECREMENT_VOTE_COUNT';
 export const CREATE_LOCATION = 'CREATE_LOCATION';
 
-export default function increment() {
+export function incrementVoteForLocation(name) {
   return {
-    type: INCREMENT_COUNTER
+    type: INCREMENT_VOTE_COUNT,
+    location: name
+  };
+}
+
+export function decrementVoteForLocation(name) {
+  return {
+    type: DECREMENT_VOTE_COUNT,
+    location: name
   };
 }
 

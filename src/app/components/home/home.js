@@ -9,7 +9,8 @@ import Button from '@material-ui/core/Button';
 import { useForm } from "react-hook-form";
 import { FormGroup } from '@material-ui/core';
 import FormLabel from '@material-ui/core/FormLabel';
-import { createLocation }  from '../../../actions/actionTypes'
+import { createLocation }  from '../../../actions/actionTypes';
+import { useHistory } from "react-router-dom";
 
 const useStyles = makeStyles((theme) => ({
   root: {
@@ -32,11 +33,13 @@ const useStyles = makeStyles((theme) => ({
 
 function Home (){
   const classes = useStyles();
+  let history = useHistory();
   const {  handleSubmit, control } = useForm();
   const onSubmit = (data) => {
     // todo : dispatch only when qll fields are valid 
     // todo : add error of the input text
       store.dispatch(createLocation(data));
+      history.push('/vote')
   };
 
     return (
