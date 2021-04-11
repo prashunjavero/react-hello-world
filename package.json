@@ -153,6 +153,7 @@
     "eslint": "^7.24.0",
     "eslint-config-google": "^0.14.0",
     "eslint-plugin-react": "^7.23.2",
+    "react-hook-form": "^7.0.5",
     "react-router-dom": "^5.2.0",
     "redux-thunk": "^2.3.0",
     "resolve": "^1.18.1",
