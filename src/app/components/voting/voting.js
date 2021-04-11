@@ -53,7 +53,7 @@ function Voting (){
             <Paper className={classes.paper}>
               <p className={classes.text}> Name: {i.name}</p>
               <p className={classes.text}> Address: {i.address}</p>
-              <span>Link : </span> <Link className={classes.text} href={i.link} >{i.link}</Link>
+              <span className={classes.text}>Link : </span> <Link className={classes.text} href={i.link} >{i.link}</Link>
             </Paper>
           </Grid>
         </Box>
