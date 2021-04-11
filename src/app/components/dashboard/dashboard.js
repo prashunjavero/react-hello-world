@@ -1,4 +1,4 @@
-import React, { Component, useEffect, useRef, useState }  from 'react';
+import React, { Component, useEffect }  from 'react';
 import {
   Chart,
   ArcElement,
@@ -53,11 +53,6 @@ Chart.register(
 );
 
 
-
-const labels = Object.keys(localStorage);
-const dataArray = [] ;
-const labelArray = [];
-
 let getData = () => {
 
 const data = {
@@ -107,9 +102,6 @@ return chartConfig;
 function Dashboard() {
   const chartContainer = React.useRef();
   const [chartInstance, setChartInstance] = React.useState();
-  const [, updateComponent] = React.useState();
-  const forceUpdateComponent = React.useCallback(() => updateComponent({}), []);  
-   
 
   useEffect(() => {
     if (chartContainer && chartContainer.current) {
