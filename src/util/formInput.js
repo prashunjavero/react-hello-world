@@ -5,9 +5,7 @@ import TextField from "@material-ui/core/TextField";
 
 function FormInput({ control, name, label }) {
     const {
-      field: { ref, ...inputProps },
-      fieldState: { invalid, isTouched, isDirty },
-      formState: { touchedFields, dirtyFields }
+      field: { ref, ...inputProps }
     } = useController({
       name,
       control,
