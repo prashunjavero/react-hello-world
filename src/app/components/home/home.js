@@ -9,6 +9,7 @@ import Button from '@material-ui/core/Button';
 import { useForm } from "react-hook-form";
 import { FormGroup } from '@material-ui/core';
 import FormLabel from '@material-ui/core/FormLabel';
+import { createLocation }  from '../../../actions/actionTypes'
 
 import './home.css';
 
@@ -33,9 +34,12 @@ const useStyles = makeStyles((theme) => ({
 
 function Home (){
   const classes = useStyles();
-  const { register, handleSubmit, control, errors } = useForm();
-  // todo: should dispatch action for valid data
-  const onSubmit = data => console.log(data);
+  const {  handleSubmit, control } = useForm();
+  const onSubmit = (data) => {
+    // todo : dispatch only when qll fields are valid 
+    // todo : add error of the input text
+      store.dispatch(createLocation(data));
+  };
 
     return (
       <Container className={classes.container}  >
