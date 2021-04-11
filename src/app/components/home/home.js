@@ -34,6 +34,7 @@ const useStyles = makeStyles((theme) => ({
 function Home (){
   const classes = useStyles();
   const { register, handleSubmit, control, errors } = useForm();
+  // todo: should dispatch action for valid data
   const onSubmit = data => console.log(data);
 
     return (
