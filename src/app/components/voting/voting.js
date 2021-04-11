@@ -82,18 +82,21 @@ function Voting (){
                 bgcolor="background.paper">
                 {items}
               </Box>
-              <Box display='flex' 
-              flexWrap="nowrap"
-              p={1}
-              m={2}>
-                <Button variant="contained" color="primary" 
-                onClick={ () => { 
-                  Object.keys(localStorage).forEach(function(key){
-                     localStorage.setItem(key.toString(), 0)
-                  });
-                  forceUpdateComponent();
-                 }}>Reset</Button>
-               </Box>
+              {items.length > 0 &&
+                    <Box 
+                    display='flex' 
+                    flexWrap="nowrap"
+                    p={1}
+                    m={2}>
+                      <Button variant="contained" color="primary" 
+                      onClick={ () => { 
+                        Object.keys(localStorage).forEach(function(key){
+                          localStorage.setItem(key.toString(), 0)
+                        });
+                        forceUpdateComponent();
+                      }}>Reset</Button>
+                    </Box>
+               }
       </div>
     );
   }
