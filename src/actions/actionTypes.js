@@ -1,6 +1,6 @@
 /* eslint-disable require-jsdoc */
-const INCREMENT_COUNTER = 'INCREMENT_COUNTER';
-const CREATE_LOCATION = 'CREATE_LOCATION';
+export const INCREMENT_COUNTER = 'INCREMENT_COUNTER';
+export const CREATE_LOCATION = 'CREATE_LOCATION';
 
 export default function increment() {
   return {

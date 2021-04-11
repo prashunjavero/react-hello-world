@@ -11,8 +11,6 @@ import { FormGroup } from '@material-ui/core';
 import FormLabel from '@material-ui/core/FormLabel';
 import { createLocation }  from '../../../actions/actionTypes'
 
-import './home.css';
-
 const useStyles = makeStyles((theme) => ({
   root: {
     flexGrow: 1,
