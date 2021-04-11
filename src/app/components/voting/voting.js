@@ -5,6 +5,7 @@ import { makeStyles } from '@material-ui/core/styles';
 import Paper from '@material-ui/core/Paper';
 import Button from '@material-ui/core/Button';
 import Box from '@material-ui/core/Box';
+import Link from '@material-ui/core/Link';
 
 const useStyles = makeStyles((theme) => ({
   root: {
@@ -52,7 +53,7 @@ function Voting (){
             <Paper className={classes.paper}>
               <p className={classes.text}> Name: {i.name}</p>
               <p className={classes.text}> Address: {i.address}</p>
-              <a className={classes.text}> Menu Link: {i.link}</a>
+              <span>Link : </span> <Link className={classes.text} href={i.link} >{i.link}</Link>
             </Paper>
           </Grid>
         </Box>
